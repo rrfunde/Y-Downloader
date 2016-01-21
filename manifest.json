@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Entertainment",
+  "name": "Y-Downloader",
   "version": "0.1",
-  "browser_action": {
+  "page_action": {
  "default_icon": "icon.png"
 
 },
@@ -12,15 +12,13 @@
 
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+              "matches": ["*://www.youtube.com/*"],
+
       "js": ["content.js"]
     }
   ],
   "background": {
-  "scripts": ["background.js"],
-  "persistence": false
+  "scripts": ["background.js"]
 }
   
 }
